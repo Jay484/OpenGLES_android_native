@@ -1,8 +1,7 @@
 #include <jni.h>
-#include <android/log.h>
-#include <unistd.h>
 #include <base.h>
 #include <triangle.h>
+#include <android/log.h>
 
 #define LOG_TAG "libNative"
 
@@ -14,8 +13,7 @@ Java_com_example_opengles_1android_1native_openglsdk_NativeCode_00024Companion_i
         jint width,
         jint height
         ) {
-    LOG_E(LOG_TAG, "Hello error from native!!");
-    setupGraphics(width, height);
+    triangle::setupGraphics(width, height);
 }
 
 extern "C"
@@ -24,5 +22,5 @@ Java_com_example_opengles_1android_1native_openglsdk_NativeCode_00024Companion_s
         JNIEnv *env,
         jobject thiz
         ) {
-    renderFrame();
+    triangle::renderFrame();
 }

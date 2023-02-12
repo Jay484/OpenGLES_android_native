@@ -1,11 +1,13 @@
 //
-// Created by Dhananjay Jhinkwan on 27/01/23.
+// Created by Dhananjay Jhinkwan on 28/01/23.
 //
 
-#pragma once
+#ifndef OPENGLES_ANDROID_NATIVE_CUBE_H
+#define OPENGLES_ANDROID_NATIVE_CUBE_H
 
 #include <base.h>
-namespace triangle {
+
+namespace cube{
     static const char glVertexShader[] =
             "attribute vec4 vPosition;\n"
             "void main()\n"
@@ -30,3 +32,6 @@ namespace triangle {
 
     void renderFrame();
 }
+
+
+#endif //OPENGLES_ANDROID_NATIVE_CUBE_H

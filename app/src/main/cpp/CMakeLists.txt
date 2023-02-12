@@ -22,7 +22,9 @@ add_library( # Sets the name of the library.
 
         # Provides a relative path to your source file(s).
         base/native-lib.cpp
+        base/base.cpp
         triangle/triangle.cpp
+        cube/cube.cpp
         )
 
 
@@ -42,4 +44,4 @@ target_link_libraries( # Specifies the target library.
         m
         )
 
-include_directories(vender/glm triangle base)
+include_directories(vender/glm base triangle cube)
